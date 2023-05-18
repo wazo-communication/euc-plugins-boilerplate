@@ -9,7 +9,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        index: path.resolve(__dirname, 'index.html'),
+        wda: path.resolve(__dirname, 'wda.html'),
+        portal: path.resolve(__dirname, 'portal.html'),
         background: path.resolve(__dirname, 'src/background.ts'),
       },
       output: {

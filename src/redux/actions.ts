@@ -19,6 +19,8 @@ export const loadContext = createAsyncThunk(
       const { app, user }: AppContext = await application.getContext();
       const appContext: AppContext = { app, user: { ...user } as WDASession };
 
+      console.log('appContext', appContext);
+
       return appContext as AppContext;
     } catch (e) {
       console.error(e);

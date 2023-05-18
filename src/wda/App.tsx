@@ -3,10 +3,10 @@ import { useIntl } from 'react-intl';
 import { Typography, styled } from '@mui/material';
 import { connect } from 'react-redux';
 
-import type { RootState } from './redux/store';
+import type { RootState } from '../redux/store';
 import type { WDASession } from '@wazo/euc-plugins-sdk/types';
 
-import { loadContext as loadContextAction } from './redux/actions';
+import { loadContext as loadContextAction } from '../redux/actions';
 
 const Title = styled(Typography)(() => ({
   textAlign: 'center'

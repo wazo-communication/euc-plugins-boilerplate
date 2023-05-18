@@ -27,16 +27,26 @@
   },
   "staticTabs": [
     {
-      "entityId": "my-plugin",
+      "entityId": "my-wda-ma-plugin",
       "context": [
         "contactTab",
         "sidebarTab",
         "mobileTab"
       ],
       "name": "My plugin",
-      "contentUrl": ".",
+      "contentUrl": "./wda.html",
       "icon": "./plugin-icon.svg",
       "mobileIcon": "chatbubble-ellipses-outline"
+    },
+
+    {
+      "entityId": "my-portal-plugin",
+      "context": [
+        "generalPbxTab"
+      ],
+      "name": "My plugin",
+      "contentUrl": "./portal.html",
+      "icon": "./plugin-icon.svg"
     }
   ],
   "backgroundScript": "./src/background.ts"
