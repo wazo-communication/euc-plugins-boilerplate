@@ -29,7 +29,6 @@
     {
       "entityId": "my-wda-ma-plugin",
       "context": [
-        "contactTab",
         "sidebarTab",
         "mobileTab"
       ],
