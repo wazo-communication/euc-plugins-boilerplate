@@ -57,18 +57,18 @@ It displays the `portal.html` file, which loads the [Portal main.tsx file](./src
 
 # Customization
 
-The icon for the plugin can be configured in the [plugin-icon.svg](`./public/plugin-icon.svg`) file located in the public directory.
+The icon for the plugin can be configured in the [plugin-icon.svg](`./public/plugin-icon.svg`) file located in the `public` directory.
 
 For the mobile icon, you should select an icon from the [Ionic icons](https://ionic.io/ionicons) library.
 
 For information about translating the manifest elements, please refer to the [documentation](https://wazo-communication.github.io/euc-plugins-js-sdk/docs/configuration#translating-manifest-elements) and the [`manifest-fr.json`](./public/manifest-fr.json) file located in the `public` directory.
 
 The [`backgroundScript`](./src/background.ts) defined in the `src/background.ts` file can be used for executing tasks when the plugin is not displayed.
-⚠️ Please note that in the manifest file for the production build, the src/ part should be removed. The development and build modes should have the same URLs.
+⚠️ Please note that in the manifest file for the production build, the `src/` part should be removed. The development and build modes should have the same URLs.
 
 # What's in it ?
 
-This boilerplate is written in Rect with Typescript. It uses redux to the [EUC App context](https://wazo-communication.github.io/euc-plugins-js-sdk/docs/sdk#retrieving-the-euc-app-context).
+This boilerplate is written in React with Typescript. It uses Redux to the [EUC App context](https://wazo-communication.github.io/euc-plugins-js-sdk/docs/sdk#retrieving-the-euc-app-context).
 
 We also store the `locale` in the store and translate content depending on the EUC App locale through `react-intl`.
 
