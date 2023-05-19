@@ -1,0 +1,52 @@
+{
+  "manifestVersion": "0.1",
+  "version": "1.0.0",
+  "id": "boilerplate",
+  "packageName": "com.wazo.boilerplate",
+  "developer": {
+    "name": "Wazo",
+    "websiteUrl": "https://wazo.io",
+    "privacyUrl": "https://wazo.io/privacy-policy/"
+  },
+  "name": {
+    "short": "EUC Plugins boilerplate",
+    "full": "EUC Plugins boilerplate"
+  },
+  "description": {
+    "short": "Short description of your app (<= 80 chars)",
+    "full": "Full description of your app (<= 4000 chars)"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en",
+    "additionalLanguages": [
+      {
+        "languageTag": "fr",
+        "file": "manifest-fr.json"
+      }
+    ]
+  },
+  "staticTabs": [
+    {
+      "entityId": "my-wda-ma-plugin",
+      "context": [
+        "sidebarTab",
+        "mobileTab"
+      ],
+      "name": "My plugin",
+      "contentUrl": "./wda.html",
+      "icon": "./plugin-icon.svg",
+      "mobileIcon": "chatbubble-ellipses-outline"
+    },
+
+    {
+      "entityId": "my-portal-plugin",
+      "context": [
+        "generalPbxTab"
+      ],
+      "name": "My plugin",
+      "contentUrl": "./portal.html",
+      "icon": "./plugin-icon.svg"
+    }
+  ],
+  "backgroundScript": "./src/background.ts"
+}
