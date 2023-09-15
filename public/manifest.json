@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "id": "boilerplate",
   "packageName": "com.wazo.boilerplate",
+  "icons": {
+    "color": "./logo-full.svg"
+  },
   "developer": {
     "name": "Wazo",
     "websiteUrl": "https://wazo.io",
@@ -41,7 +44,7 @@
     {
       "entityId": "my-portal-plugin",
       "context": [
-        "generalPbxTab"
+        "pbxMenu"
       ],
       "name": "My plugin",
       "contentUrl": "./portal.html",

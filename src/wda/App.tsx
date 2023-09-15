@@ -31,10 +31,16 @@ function App({ user, loadContext }: Props) {
 
   return (
     <>
-      <Title variant="h1">{intl.formatMessage({ id: 'welcome' })}</Title>
-      {user && user.profile && (
-        <SubTitle id="firstname" variant="h2">{user.profile.firstName}</SubTitle>
-      )}
+      <section className="intro">
+        <article>
+          <h1>
+            { intl.formatMessage({ id: 'welcome' }) }
+            { user?.profile && <span id="firstname"> {user.profile.firstName}</span> }
+          </h1>
+          <p>{intl.formatMessage({ id: 'introduction' })}</p>
+          <a href="https://github.com/wazo-communication/euc-plugins-boilerplate" target="_blank">{intl.formatMessage({ id: 'introduction_button' })}</a>
+        </article>
+      </section>
     </>
   )
 }

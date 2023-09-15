@@ -1,3 +1,5 @@
 {
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "introduction": "Streamline your development process, allowing you to focus on the core functionality of your plugin without starting from scratch.",
+  "introduction_button": "View Source"
 }

@@ -1,3 +1,5 @@
 {
-  "welcome": "Bienvenue"
+  "welcome": "Bienvenue",
+  "introduction": "Accélérez votre processus de développement, en vous permettant de vous concentrer sur les fonctionnalités de base de votre plugin sans repartir de zéro.",
+  "introduction_button": "Code Source"
 }
