@@ -12,13 +12,14 @@ export interface ThemeProviderProps {
   contextTheme: object | null | undefined;
 }
 
-const getMuiThemeFromContext = (theme: object) => createTheme({
-  ...defaultTheme,
-  ...theme,
-});
+const getMuiThemeFromContext = (theme: object) =>
+  createTheme({
+    ...defaultTheme,
+    ...theme,
+  });
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, contextTheme }) => (
-  <MuiThemeProvider theme={contextTheme ? getMuiThemeFromContext(contextTheme) :  defaultTheme}>
+  <MuiThemeProvider theme={contextTheme ? getMuiThemeFromContext(contextTheme) : defaultTheme}>
     <CssBaseline />
     {children}
   </MuiThemeProvider>

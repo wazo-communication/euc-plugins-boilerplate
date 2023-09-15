@@ -8,9 +8,9 @@ import type { RootState } from '../redux/store';
 import { loadContext as loadContextAction } from '../redux/actions';
 
 type Props = {
-  host: string | null,
-  loadContext: () => void,
-}
+  host: string | null;
+  loadContext: () => void;
+};
 
 function App({ host, loadContext }: Props) {
   const intl = useIntl();
@@ -25,7 +25,9 @@ function App({ host, loadContext }: Props) {
         <article>
           <h1>React + Redux + MUI</h1>
           <p>{intl.formatMessage({ id: 'introduction' })}</p>
-          <a href="https://github.com/wazo-communication/euc-plugins-boilerplate" target="_blank">{intl.formatMessage({ id: 'introduction_button' })}</a>
+          <a href="https://github.com/wazo-communication/euc-plugins-boilerplate" target="_blank">
+            {intl.formatMessage({ id: 'introduction_button' })}
+          </a>
         </article>
       </section>
 
@@ -47,12 +49,7 @@ function App({ host, loadContext }: Props) {
 
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Choices</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              label="Select"
-              variant="standard"
-            >
+            <Select labelId="demo-simple-select-label" id="demo-simple-select" label="Select" variant="standard">
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
@@ -70,11 +67,7 @@ function App({ host, loadContext }: Props) {
         <br />
 
         <FormControl>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="female"
-            name="radio-buttons-group"
-          >
+          <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="female" name="radio-buttons-group">
             <FormControlLabel value="female" control={<Radio />} label="WebRTC" />
             <FormControlLabel value="male" control={<Radio />} label="SIP" />
             <FormControlLabel value="other" control={<Radio />} label="Other" />
@@ -83,21 +76,33 @@ function App({ host, loadContext }: Props) {
 
         <h2>Basic button</h2>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" color="primary">Primary</Button>
-          <Button variant="contained" color="secondary">Secondary</Button>
-          <Button variant="contained" color="error">Error</Button>
+          <Button variant="contained" color="primary">
+            Primary
+          </Button>
+          <Button variant="contained" color="secondary">
+            Secondary
+          </Button>
+          <Button variant="contained" color="error">
+            Error
+          </Button>
         </Stack>
 
         <br />
 
         <Stack direction="row" spacing={2}>
-          <Button variant="outlined" color="primary">Primary</Button>
-          <Button variant="outlined" color="secondary">Secondary</Button>
-          <Button variant="outlined" color="error">Error</Button>
+          <Button variant="outlined" color="primary">
+            Primary
+          </Button>
+          <Button variant="outlined" color="secondary">
+            Secondary
+          </Button>
+          <Button variant="outlined" color="error">
+            Error
+          </Button>
         </Stack>
-    </main>
+      </main>
     </>
-  )
+  );
 }
 
 const mapState = (state: RootState) => ({

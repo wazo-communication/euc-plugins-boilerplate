@@ -1,18 +1,19 @@
 body {
   padding: 5rem;
-  background-image: radial-gradient(circle, #203890 0%, #E62B40 150%);
-  color: #FFF;
+  background-image: radial-gradient(circle, #203890 0%, #e62b40 150%);
+  color: #fff;
 }
 
 .intro article {
-  color: #FFF;
+  color: #fff;
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
   text-align: center;
 }
 
-.intro h1, .intro h2 {
+.intro h1,
+.intro h2 {
   margin: 0 0 5px;
   font-size: 3rem !important;
 }
@@ -22,13 +23,13 @@ body {
 }
 
 .intro article a {
-  background-color: #FFF;
+  background-color: #fff;
   color: #203890;
   padding: 1rem;
   display: inline-block;
   font-weight: bold;
   border-radius: 2px;
-  box-shadow: 2px 0px 3px rgba(0,0,0,0.5);
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
   margin-top: 15px;
   text-decoration: none !important;
 }

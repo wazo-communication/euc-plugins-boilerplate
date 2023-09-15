@@ -14,8 +14,8 @@ export default createTheme({
   components: {
     MuiTypography: {
       defaultProps: {
-        color: 'primary'
-      }
-    }
+        color: 'primary',
+      },
+    },
   },
 });
