@@ -16,23 +16,19 @@ const login = async (page) => {
   await page.fill('#username', email);
   await page.fill('input[name="password"]', password);
 
-  await page.locator('button[type="submit"]').click();
+  await Promise.all([page.waitForLoadState('networkidle'), page.locator('button[type="submit"]').click()]);
 
-  // wait for all network requests to finish
-  try {
-    await page.waitForSelector('#tenant-switcher');
-    await page.waitForLoadState('networkidle', { timeout: 5000 });
-  } catch (e) {
-    // nothing to do
+  if (reseller) {
+    const tenantSelector = page.locator('#tenant-switcher');
+    await expect(tenantSelector).toBeVisible();
+    await tenantSelector.click();
+    await page.locator(`#tenant-switcher div[tabindex="-1"]:has-text("${reseller}")`).click();
   }
-
-  await page.locator('#tenant-switcher').click();
-  await page.locator(`#tenant-switcher div[tabindex="-1"]:has-text("${reseller}")`).click();
   await page.locator('a.item[href="#/instances"]').click();
   await page.locator(`tr:has(span:has-text("${expectHost}")) button[data-cy="connect-to-instance-button"]`).click();
 
   await page.locator('button:has-text("My plugin")').click();
-}
+};
 
 test('Checking hostname is displayed', async ({ page }) => {
   await login(page);

@@ -92,7 +92,7 @@ You'll see a new tab when connecting to a Stack.
 
 # End-to-end testing
 
-This project uses `playwrihgt` to run e2e tests.
+This project uses `playwright` to run e2e tests.
 
 ## WDA
 
