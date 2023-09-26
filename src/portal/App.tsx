@@ -32,7 +32,7 @@ function App({ host, loadContext }: Props) {
     <>
       <Title variant="h1">{intl.formatMessage({ id: 'welcome' })}</Title>
       {host && (
-        <SubTitle variant="h2">{host}</SubTitle>
+        <SubTitle id="host" variant="h2">{host}</SubTitle>
       )}
     </>
   )

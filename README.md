@@ -89,3 +89,19 @@ You'll see a new chat icon in the sidebar.
 #### Portal
 Then navigate to [The portal application including the plugin](https://portal.wazo.io/?manifestUrl=http://localhost:5173/manifest.json).
 You'll see a new tab when connecting to a Stack.
+
+# End-to-end testing
+
+This project uses `playwright` to run e2e tests.
+
+## WDA
+
+```sh
+EMAIL=me@my-stack.io PASSWORD=xxx SERVER=my-stack.io EXPECTED_FIRSTNAME=John yarn e2e:wda
+```
+
+## Portal
+
+```sh
+EMAIL=admin@my-stack.io PASSWORD=xxx RESELLER="My reseller" EXPECTED_HOST=my-stack.io yarn e2e:portal
+```

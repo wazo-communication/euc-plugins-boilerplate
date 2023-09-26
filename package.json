@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "e2e:wda": "yarn playwright test e2e/wda",
+    "e2e:portal": "yarn playwright test e2e/portal"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.1",
     "@mui/system": "^5.13.1",
+    "@playwright/test": "^1.38.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@wazo/euc-plugins-sdk": "^0.0.19",
     "events": "^3.3.0",

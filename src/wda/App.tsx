@@ -33,7 +33,7 @@ function App({ user, loadContext }: Props) {
     <>
       <Title variant="h1">{intl.formatMessage({ id: 'welcome' })}</Title>
       {user && user.profile && (
-        <SubTitle variant="h2">{user.profile.firstName}</SubTitle>
+        <SubTitle id="firstname" variant="h2">{user.profile.firstName}</SubTitle>
       )}
     </>
   )
