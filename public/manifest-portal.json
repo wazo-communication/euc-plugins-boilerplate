@@ -1,0 +1,44 @@
+{
+  "manifestVersion": "0.1",
+  "version": "1.0.0",
+  "id": "boilerplate",
+  "packageName": "com.wazo.boilerplate",
+  "productType": "portal",
+  "developer": {
+    "name": "Wazo",
+    "websiteUrl": "https://wazo.io",
+    "privacyUrl": "https://wazo.io/privacy-policy/"
+  },
+  "icons": {
+    "color": "./logo-full.svg"
+  },
+  "name": {
+    "short": "Plugins Boilerplate (Portal)",
+    "full": "EUC Plugins Boilerplate (Portal)"
+  },
+  "description": {
+    "short": "Short description (<= 30 chars)",
+    "full": "Full description of your app (<= 4000 chars)"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en",
+    "additionalLanguages": [
+      {
+        "languageTag": "fr",
+        "file": "manifest-portal-fr.json"
+      }
+    ]
+  },
+  "staticTabs": [
+    {
+      "entityId": "my-portal-plugin",
+      "context": [
+        "generalPbxTab"
+      ],
+      "name": "My Portal's Plugin",
+      "contentUrl": "./portal.html",
+      "icon": "./plugin-icon.svg"
+    }
+  ],
+  "backgroundScript": "./src/background.ts"
+}
