@@ -6,6 +6,7 @@ import LocaleProvider from '../locale/LocaleProvider';
 import ThemeProvider from '../theme/ThemeProvider';
 
 import App from './App.tsx';
+import './portal.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Provider store={store}>
@@ -14,5 +15,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <App />
       </LocaleProvider>
     </ThemeProvider>
-  </Provider>
-)
+  </Provider>,
+);

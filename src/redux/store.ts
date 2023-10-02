@@ -5,7 +5,7 @@ import { loadContext } from './actions';
 
 // Define a type for the slice state
 interface GlobalState {
-  context?: AppContext,
+  context?: AppContext;
 }
 
 // Define the initial state using that type
@@ -16,8 +16,7 @@ const initialState: GlobalState = {
 const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: {
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(loadContext.fulfilled, (state, { payload }) => {
       if (payload) {
